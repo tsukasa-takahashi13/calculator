@@ -28,34 +28,34 @@
         <div class="buttons">
 
             <!-- 1段目 -->
-            <button class="function" type="submit" formaction="clear">AC</button>
-            <button class="function" type="button" aria-label="1文字削除">×</button>
-            <button class="function" type="button">%</button>
-            <button class="operator" type="button">÷</button>
+            <button class="function" type="submit" formaction="clear" onclick="">AC</button>
+            <button class="function" type="button" aria-label="1文字削除" onclick="">×</button>
+            <button class="function" type="button" onclick="inputOperator('%')">%</button>
+            <button class="operator" type="button" onclick="inputOperator('÷')">÷</button>
 
             <!-- 2段目 -->
-            <button class="number" type="button">7</button>
-            <button class="number" type="button">8</button>
-            <button class="number" type="button">9</button>
-            <button class="operator" type="button" aria-label="掛ける">×</button>
+            <button class="number" type="button" onclick="inputNumber('7')">7</button>
+            <button class="number" type="button" onclick="inputNumber('8')">8</button>
+            <button class="number" type="button" onclick="inputNumber('9')">9</button>
+            <button class="operator" type="button" aria-label="掛ける" onclick="inputOperator('×')">×</button>
 
             <!-- 3段目 -->
-            <button class="number" type="button">4</button>
-            <button class="number" type="button">5</button>
-            <button class="number" type="button">6</button>
-            <button class="operator" type="button">−</button>
+            <button class="number" type="button" onclick="inputNumber('4')">4</button>
+            <button class="number" type="button" onclick="inputNumber('5')">5</button>
+            <button class="number" type="button" onclick="inputNumber('6')">6</button>
+            <button class="operator" type="button" onclick="inputOperator('−')">−</button>
 
             <!-- 4段目 -->
-            <button class="number" type="button">1</button>
-            <button class="number" type="button">2</button>
-            <button class="number" type="button">3</button>
-            <button class="operator" type="button">＋</button>
+            <button class="number" type="button" onclick="inputNumber('1')">1</button>
+            <button class="number" type="button" onclick="inputNumber('2')">2</button>
+            <button class="number" type="button" onclick="inputNumber('3')">3</button>
+            <button class="operator" type="button" onclick="inputOperator('＋')">＋</button>
 
             <!-- 5段目 -->
-            <button class="sign" type="button">+/−</button>
-            <button class="number" type="button">0</button>
-            <button class="number" type="button">.</button>
-            <button class="operator" type="submit">=</button>
+            <button class="sign" type="button" onclick="">+/−</button>
+            <button class="number" type="button" onclick="inputNumber('0')">0</button>
+            <button class="number" type="button" onclick="">.</button>
+            <button class="operator" type="button" onclick="calculate()">=</button>
 
         </div>
 
@@ -77,6 +77,6 @@
     </div>
 
 </div>
-
+<script src="${pageContext.request.contextPath}/js/calculator.js"></script>
 </body>
 </html>
